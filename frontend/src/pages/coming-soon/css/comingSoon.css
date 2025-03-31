@@ -1,0 +1,33 @@
+.coming-soon-flexbox{
+    display: flex;
+    flex-direction: row;
+
+    padding-left: 100px;
+    padding-right: 100px;
+
+    justify-content: space-evenly;
+
+    img{
+        width: 500px;
+        height: 500px;
+    }
+
+    #upper-paragraph{
+        margin-bottom: 150px;
+        margin-top: 50px;
+    }
+
+    .information{
+        margin-left: 100px;
+    }
+
+    a{
+        color: white;
+        text-decoration: none;
+    }
+
+    p{
+        margin-top: -20px;
+        margin-bottom: 50px;
+    }
+}
