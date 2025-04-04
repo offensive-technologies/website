@@ -1,5 +1,5 @@
 import "./css/comingSoon.css"
-import logo from "../../assets/logo.jpg"
+import logo from "../../assets/emblem.png"
 import { FaLinkedin } from "react-icons/fa";
 
 export default function ComingSoon() {
