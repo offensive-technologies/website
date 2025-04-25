@@ -1,0 +1,35 @@
+:root {
+  font-family: "Aptos", system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  /* color-scheme: light dark; */
+  color: #a49c9a;
+  background-color: #171717;
+
+  /* font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; */
+}
+
+@font-face {
+  font-family: "Aptos";
+  src: url("./assets/fonts/aptos/Aptos.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.notfound {
+  /* margin: 60px; */
+  text-transform: uppercase;
+  height: 80vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;    
+}
+
+.notfound p {
+  font-size: 20pt;
+  text-align: center;
+}

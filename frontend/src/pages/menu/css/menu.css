@@ -1,0 +1,47 @@
+.menu-flexbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-transform: uppercase;
+}
+
+.right-part-menu, 
+.left-part-menu{
+    display: flex;
+    flex-direction: row;
+    font-family: "Aptos";
+    font-size: 16pt;
+}
+
+.right-part-menu{
+    margin-right: 40px;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.left-part-menu{
+    margin-left: 40px;
+    gap: 15px;
+}
+
+#brand-title{
+    color: #751b08;
+    border-right: 1px solid #a49c9a;
+    padding-right: 15px;
+    text-decoration: none;
+
+}
+
+#nav, #placeholder{
+    color: #a49c9a;
+    text-decoration: none;
+}
+
+#nav:hover {
+    cursor: pointer;
+    opacity: 50%;
+}
+  
+#nav.active {
+    opacity: 50%;
+}

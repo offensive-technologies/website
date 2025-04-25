@@ -1,0 +1,23 @@
+.about-page{
+    margin: 60px;
+
+    .about-block{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        
+        padding: 20px;
+        padding-bottom: 50px;
+
+        img{
+            max-width: 550px;
+            max-height: 275px;
+        }
+
+        p{
+            text-align: justify;
+            max-width: 500px;
+        }
+    }
+
+}
