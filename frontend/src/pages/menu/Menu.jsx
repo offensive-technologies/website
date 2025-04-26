@@ -8,8 +8,8 @@ export default function Menu() {
     switch (path) {
       case "/library":
         return "Library";
-      //   case "/tools":
-      //     return "Tools";
+      case "/tools":
+        return "Tools";
       case "/about":
         return "About";
       case "/":
@@ -31,7 +31,9 @@ export default function Menu() {
         <NavLink to="/library" state={{ fromMenu: true }} id="nav">
           LIBRARY
         </NavLink>
-        {/* <NavLink to="/tools" id="nav">TOOLS</NavLink> */}
+        <NavLink to="/tools" state={{ fromMenu: true }} id="nav">
+          TOOLS
+        </NavLink>
         <NavLink to="/about" state={{ fromMenu: true }} id="nav">
           ABOUT
         </NavLink>

@@ -1,4 +1,4 @@
-import { unavailables } from "../api/mock_data";
+import { unavailables } from "../api/data";
 
 export default function NotFound() {
   const value =

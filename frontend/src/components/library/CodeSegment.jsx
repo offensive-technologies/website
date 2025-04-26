@@ -1,18 +1,15 @@
-import { CodeBlock, dracula } from "react-code-blocks";
+import CodeBlock from "@roo-app/react-code-block";
+import { themes } from "prism-react-renderer";
+import "./css/library.css";
+
+const codeBlock = `
+print("hello world")
+`;
 
 export default function CodeSegment() {
-  const code = "print('hello')";
-
   return (
-    <>
-      <div>
-        <CodeBlock
-          text={code}
-          language={"py"}
-          showLineNumbers={true}
-          theme={dracula}
-        />
-      </div>
-    </>
+    <div className="codesegment">
+      <CodeBlock code={codeBlock} theme={themes.vsDark} language="py" />
+    </div>
   );
 }

@@ -39,28 +39,47 @@ export const about_blocks = [
 
 export const library_blocks = [
     {
-        img: "/src/assets/images/templates.png",
-        title: "Templates",
-        table: "templates"
+        img: "/src/assets/images/models.png",
+        title: "models",
+        table: "models"
     }, 
     {
-        img: "/src/assets/images/algorithms.png",
-        title: "Algorithms",
-        table: "algorithms"
+        img: "/src/assets/images/logics.png",
+        title: "logics",
+        table: "logics"
     }, 
 ]
 
+export const library_suggestions = [
+    { title: "Authentication" },
+    { title: "Authorization" },
+    { title: "Database Models" },
+    { title: "API Endpoints" },
+    { title: "Frontend Components" },
+    { title: "State Management" },
+    { title: "Routing" },
+    { title: "Form Validation" },
+    { title: "Error Handling" },
+    { title: "File Uploads" },
+    { title: "Responsive Design" },
+    { title: "Testing Utilities" },
+    { title: "Performance Optimization" },
+    { title: "Logging System" },
+    { title: "Notifications" }
+  ];
+  
+
 export const tools_blocks = [
     {
-        img: "/src/assets/images/*.png",
+        img: "/src/assets/images/recon.png",
         title: "Recon"
     }, 
     {
-        img: "/src/assets/images/*.png",
+        img: "/src/assets/images/deceive.png",
         title: "Deceive"
     }, 
     {
-        img: "/src/assets/images/*.png",
+        img: "/src/assets/images/attack.png",
         title: "Attack"
     }, 
 ]

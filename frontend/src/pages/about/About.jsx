@@ -1,4 +1,4 @@
-import { about_blocks } from "../../api/mock_data";
+import { about_blocks } from "../../api/data";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import "./css/about.css";

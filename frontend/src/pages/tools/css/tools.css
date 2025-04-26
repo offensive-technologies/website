@@ -1,0 +1,17 @@
+.tools-page {
+    margin: 60px;
+    padding-top: 60px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideFadeIn 1.2s ease forwards;
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+@keyframes slideFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

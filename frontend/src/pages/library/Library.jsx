@@ -1,19 +1,41 @@
-import LibraryComponent from "../../components/library/LibraryComponent";
 import { useState, useEffect, useRef } from "react";
-import { library_blocks } from "../../api/mock_data";
 import { useLocation } from "react-router-dom";
-import { IoIosArrowUp } from "react-icons/io";
+import SearchArea from "../../components/library/SearchArea";
+import IconGrid from "../../components/library/IconGrid";
+import { library_suggestions } from "../../api/data";
+import { library_blocks } from "../../api/data";
 import "./css/library.css";
 
 export default function Library() {
   const location = useLocation();
   const [selectedTable, setSelectedTable] = useState(null);
-
   const [searchInput, setSearchInput] = useState("");
   const [confirmedSearch, setConfirmedSearch] = useState("");
   const [entered, setEntered] = useState(false);
-
   const searchBarRef = useRef(null);
+
+  const [suggestions, setSuggestions] = useState([]);
+
+  const handleSearchChange = (e) => {
+    const value = e.target.value;
+    setSearchInput(value);
+
+    if (!value) {
+      setSuggestions([]);
+      return;
+    }
+
+    const filtered = library_suggestions
+      .filter((lb) => lb.title.toLowerCase().includes(value.toLowerCase()))
+      .map((lb) => lb.title);
+
+    setSuggestions(filtered);
+  };
+
+  const handleSuggestionSelect = (suggestion) => {
+    setSearchInput(suggestion);
+    setSuggestions([]);
+  };
 
   useEffect(() => {
     if (location.state?.fromMenu) {
@@ -35,53 +57,37 @@ export default function Library() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const handleSearchChange = (e) => {
-    setSearchInput(e.target.value);
-  };
-
   const resetSearch = () => {
     setSearchInput("");
     setConfirmedSearch("");
     setEntered(false);
   };
 
+  const handleEnterKey = () => {
+    setConfirmedSearch(searchInput);
+    setSearchInput("");
+    setEntered(true);
+  };
+
   return (
     <div className="library-page">
-      <div className={`icons-flexbox ${selectedTable ? "hide" : "show"}`}>
-        {library_blocks.map((lb) => (
-          <div key={lb.title} onClick={() => handleIconClick(lb.title)}>
-            <img className="icon" src={lb.img} alt={lb.title} />
-            <p>{lb.title}</p>
-          </div>
-        ))}
-      </div>
-
-      <div
-        className={`library-bottom-flexbox ${selectedTable ? "show" : "hide"}`}
-        ref={searchBarRef}
-      >
-        <div
-          className={`back-to-icons ${entered ? "after-enter" : ""}`}
-          onClick={handleBackToIcons}
-        >
-          <IoIosArrowUp size={30} />
-        </div>
-        <input
-          id="search"
-          placeholder={`Search in ${selectedTable || "..."}`}
-          value={searchInput}
-          onChange={handleSearchChange}
-          onKeyDown={(e) => {
-            if (e.key === "Enter") {
-              setConfirmedSearch(searchInput);
-              setSearchInput("");
-              setEntered(true);
-            }
-          }}
-        />
-
-        {confirmedSearch && <LibraryComponent item={confirmedSearch} />}
-      </div>
+      <IconGrid
+        blocks={library_blocks}
+        selectedTable={selectedTable}
+        onIconClick={handleIconClick}
+      />
+      <SearchArea
+        selectedTable={selectedTable}
+        searchInput={searchInput}
+        confirmedSearch={confirmedSearch}
+        entered={entered}
+        onBack={handleBackToIcons}
+        onSearchChange={handleSearchChange}
+        onEnter={handleEnterKey}
+        searchBarRef={searchBarRef}
+        suggestions={suggestions}
+        onSuggestionSelect={handleSuggestionSelect}
+      />
     </div>
   );
 }
