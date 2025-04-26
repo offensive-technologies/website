@@ -1,6 +1,7 @@
 import { about_blocks } from "../../api/data";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import React from "react";
 import "./css/about.css";
 
 export default function About() {

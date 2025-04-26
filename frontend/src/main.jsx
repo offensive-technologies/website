@@ -7,6 +7,7 @@ import NotFound from "./pages/NotFound";
 import Layout from "./pages/Layout";
 import { StrictMode } from "react";
 import "./index.css";
+import React from "react";
 
 const router = createBrowserRouter([
   {

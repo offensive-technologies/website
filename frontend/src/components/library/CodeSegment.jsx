@@ -1,3 +1,4 @@
+import React from "react";
 import CodeBlock from "@roo-app/react-code-block";
 import { themes } from "prism-react-renderer";
 import "./css/library.css";

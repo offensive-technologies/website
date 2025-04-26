@@ -1,3 +1,4 @@
+import React from "react";
 import IconItem from "./IconItem";
 
 export default function IconGrid({ blocks, selectedTable, onIconClick }) {

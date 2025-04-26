@@ -1,3 +1,5 @@
+import React from "react";
+
 export default function IconItem({ lb, onClick }) {
   return (
     <div onClick={() => onClick(lb.title)}>

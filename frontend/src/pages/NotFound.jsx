@@ -1,4 +1,5 @@
 import { unavailables } from "../api/data";
+import React from "react";
 
 export default function NotFound() {
   const value =

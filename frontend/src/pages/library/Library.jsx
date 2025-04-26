@@ -5,6 +5,7 @@ import IconGrid from "../../components/library/IconGrid";
 import { library_suggestions } from "../../api/data";
 import { library_blocks } from "../../api/data";
 import "./css/library.css";
+import React from "react";
 
 export default function Library() {
   const location = useLocation();

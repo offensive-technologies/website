@@ -1,6 +1,7 @@
 import { IoIosArrowUp } from "react-icons/io";
 import CodeSegment from "./CodeSegment";
 import AutoComplete from "./AutoComplete";
+import React from "react";
 
 export default function SearchArea({
   selectedTable,

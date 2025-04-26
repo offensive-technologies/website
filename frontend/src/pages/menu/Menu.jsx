@@ -1,5 +1,6 @@
 import { NavLink, useLocation } from "react-router-dom";
 import "./css/menu.css";
+import React from "react";
 
 export default function Menu() {
   const location = useLocation();

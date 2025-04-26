@@ -1,3 +1,4 @@
+import React from "react";
 import "./css/library.css";
 
 export default function AutoComplete({ suggestions, onSelect }) {
