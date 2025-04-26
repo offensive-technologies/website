@@ -1,54 +1,129 @@
-.library-page{
-
+.library-page {
     margin: 60px;
+    padding-top: 60px;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: slideFadeIn 1.2s ease forwards;
+    display: flex;
+    flex-direction: column;
     text-transform: uppercase;
-
-    .icons-flexbox{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-
-        gap: 130px;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .icon{
-        max-width: 150px;
-        max-height: 150px;
-        /* background-color: #212121; */
-        border-radius: 5px;
-    }
-
-    .library-bottom-flexbox{
-        display: flex;
-        flex-direction: column;
-        justify-self: center;
-        gap: 20px;
-        margin-top: 60px;
-    }
-
-    #search{
-        background-color: #212121;
-        border: none;
-        border-radius: 5px;
-        color: #3d3d3d;
-        
-        padding: 15px;
-        width: 100%;
-        min-width: 500px;
-        max-width: 500px;
-
-        align-self: center;
-    }
-
-    /* #code-block{
-        min-width: 750px;
-        min-height: 600px;
-        max-width: 750px;
-        background-color: #212121;
-        border-radius: 5px;
-        justify-self: center;
-    } */
 }
 
+/* Page fade-in on load */
+@keyframes slideFadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Icons Flexbox */
+.icons-flexbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 130px;
+    text-align: center;
+    margin-bottom: 30px;
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 1.2s ease; /* Langzamer en vloeiend */
+    pointer-events: all;
+    height: auto;
+    overflow: visible;
+}
+
+.icons-flexbox div {
+    cursor: pointer;
+}
+
+.icon {
+    max-width: 150px;
+    max-height: 150px;
+    border-radius: 5px;
+}
+
+/* Wanneer icons verdwijnen */
+.icons-flexbox.hide {
+    opacity: 0;
+    transform: translateY(-50px); /* Icons verdwijnen omhoog */
+    pointer-events: none;
+    height: 0;
+    overflow: hidden; 
+    margin-bottom: 0;
+}
+
+/* Wanneer icons weer getoond worden */
+.icons-flexbox.show {
+    opacity: 1;
+    transform: translateY(0); /* Icons zakken naar beneden */
+    pointer-events: all;
+    height: auto;
+    overflow: visible;
+}
+
+/* Search area */
+.library-bottom-flexbox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 1.2s ease;
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+}
+
+/* Wanneer search bar verdwijnt */
+.library-bottom-flexbox.hide {
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+/* Wanneer search bar verschijnt */
+.library-bottom-flexbox.show {
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+    margin-top: -120px;
+}
+
+/* Search input style */
+#search {
+    background-color: #212121;
+    border: none;
+    border-radius: 5px;
+    color: #a49c9a;
+    padding: 15px;
+    width: 100%;
+    min-width: 500px;
+    max-width: 500px;
+    font-size: 18px;
+    text-align: center;
+    outline: none;
+}
+
+#search::placeholder {
+    color: #5a5a5a;
+}
+
+/* "Back to icons" knop */
+.back-to-icons {
+    margin-top: 30px;
+    cursor: pointer;
+    font-size: 24px;
+    color: #a49c9a;
+    transition: 0.8s;
+    user-select: none;
+    margin-bottom: 120px;
+}
+
+.back-to-icons.after-enter {
+    margin-bottom: 0px; /* als je enter hebt gedaan */
+}
+
+.back-to-icons:hover {
+    color: #751b08;
+    transform: translateY(-5px);
+}

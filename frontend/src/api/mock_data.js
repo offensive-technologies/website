@@ -40,11 +40,13 @@ export const about_blocks = [
 export const library_blocks = [
     {
         img: "/src/assets/images/templates.png",
-        title: "Templates"
+        title: "Templates",
+        table: "templates"
     }, 
     {
         img: "/src/assets/images/algorithms.png",
-        title: "Algorithms"
+        title: "Algorithms",
+        table: "algorithms"
     }, 
 ]
 

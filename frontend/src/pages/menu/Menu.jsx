@@ -12,6 +12,8 @@ export default function Menu() {
       //     return "Tools";
       case "/about":
         return "About";
+      case "/":
+        return "About";
       default:
         return "404"; // Home
     }
@@ -26,11 +28,11 @@ export default function Menu() {
         <p id="placeholder">{currentPage}</p>
       </div>
       <div className="right-part-menu">
-        <NavLink to="/library" id="nav">
+        <NavLink to="/library" state={{ fromMenu: true }} id="nav">
           LIBRARY
         </NavLink>
         {/* <NavLink to="/tools" id="nav">TOOLS</NavLink> */}
-        <NavLink to="/about" id="nav">
+        <NavLink to="/about" state={{ fromMenu: true }} id="nav">
           ABOUT
         </NavLink>
       </div>

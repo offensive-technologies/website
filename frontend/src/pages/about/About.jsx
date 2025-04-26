@@ -1,8 +1,16 @@
 import { about_blocks } from "../../api/mock_data";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import "./css/about.css";
 
 export default function About() {
-  console.log(about_blocks);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.fromMenu) {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }, [location]);
 
   return (
     <>
