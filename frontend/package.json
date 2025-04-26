@@ -1,5 +1,5 @@
 {
-  "homepage": "https://offensive-technologies.github.io/",
+  "homepage": "https://offensive-technologies.com/",
   "name": "frontend",
   "private": true,
   "version": "0.0.0",
@@ -7,8 +7,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "predeploy": "yarn build", 
-    "deploy": "gh-pages -d build", 
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
@@ -25,6 +25,7 @@
     "@stylistic/eslint-plugin": "^4.2.0",
     "@types/react": "^19.0.10",
     "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react": "^4.4.1",
     "@vitejs/plugin-react-swc": "^3.8.0",
     "eslint": "^9.22.0",
     "eslint-plugin-react-hooks": "^5.2.0",
