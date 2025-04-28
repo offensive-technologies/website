@@ -36,6 +36,8 @@ export default function Library() {
   const handleSuggestionSelect = (suggestion) => {
     setSearchInput(suggestion);
     setSuggestions([]);
+    setEntered(true);
+    setConfirmedSearch(suggestion);
   };
 
   useEffect(() => {

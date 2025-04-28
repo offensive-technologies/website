@@ -10,8 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@roo-app/react-code-block": "^0.0.6",
     "react": "^19.0.0",
+    "react-code-blocks": "^0.1.6",
     "react-dom": "^19.0.0",
     "react-icons": "^5.5.0",
     "react-router": "~6.26.0",

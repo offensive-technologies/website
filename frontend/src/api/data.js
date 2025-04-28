@@ -1,6 +1,6 @@
 export const about_blocks = [
     {
-        img: "/src/assets/images/1.png",
+        img: "/src/assets/images/about-recon.png",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque \
         rhoncus erat non facilisis. Vestibulum gravida sem laoreet, gravida urna vel, \
         venenatis felis. Ut tincidunt nulla vel orci malesuada faucibus. Donec non tellus \
@@ -12,7 +12,7 @@ export const about_blocks = [
         odio vel vestibulum ullamcorper."
     }, 
     {
-        img: "/src/assets/images/2.png",
+        img: "/src/assets/images/about-deceive.png",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque \
         rhoncus erat non facilisis. Vestibulum gravida sem laoreet, gravida urna vel, \
         venenatis felis. Ut tincidunt nulla vel orci malesuada faucibus. Donec non tellus \
@@ -24,7 +24,7 @@ export const about_blocks = [
         odio vel vestibulum ullamcorper."
     },
     {
-        img: "/src/assets/images/3.png",
+        img: "/src/assets/images/about-attack.png",
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque \
         rhoncus erat non facilisis. Vestibulum gravida sem laoreet, gravida urna vel, \
         venenatis felis. Ut tincidunt nulla vel orci malesuada faucibus. Donec non tellus \
@@ -37,16 +37,17 @@ export const about_blocks = [
     }
 ]
 
+//  library data
 export const library_blocks = [
     {
-        img: "/src/assets/images/models.png",
-        title: "models",
-        table: "models"
+        img: "/src/assets/images/templates.png",
+        title: "templates",
+        table: "templates"
     }, 
     {
-        img: "/src/assets/images/logics.png",
-        title: "logics",
-        table: "logics"
+        img: "/src/assets/images/algorithms.png",
+        title: "algorithms",
+        table: "algorithms"
     }, 
 ]
 
@@ -66,9 +67,29 @@ export const library_suggestions = [
     { title: "Performance Optimization" },
     { title: "Logging System" },
     { title: "Notifications" }
-  ];
+];
   
 
+export const languages = [
+    {
+        id: 1,
+        name: "C", 
+    },
+    {
+        id: 2,
+        name: "C#", 
+    },
+    {
+        id: 3,
+        name: "VBA", 
+    },
+    {
+        id: 4,
+        name: "PS1", 
+    }
+]
+
+// tools data
 export const tools_blocks = [
     {
         img: "/src/assets/images/recon.png",

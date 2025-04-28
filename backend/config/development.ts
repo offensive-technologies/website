@@ -1,7 +1,7 @@
 export default {
-    log: {
-      level: 'silly',
-      disabled: false,
-    },
-  };
+  log: {
+    level: 'silly',
+    disabled: false,
+  },
+};
   

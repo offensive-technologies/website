@@ -1,4 +1,4 @@
 export default {
-    env: 'NODE_ENV',
+  env: 'NODE_ENV',
 };
   

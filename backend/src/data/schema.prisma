@@ -12,23 +12,30 @@ datasource db {
 }
 
 model Language {
-  @@map("language") 
+  id      Int      @id @default(autoincrement())
+  name    String   @unique
+  sources Source[]
 
-  id           Int            @id @default(autoincrement()) // @db.UnsignedInt
-  name         String        //  @unique(map: "idx_language_name_unique") @db.VarChar(255)
-
+  @@map("language")
 }
 
 model Category {
-  @@map("category")  
+  id      Int      @id @default(autoincrement())
+  name    String   @unique
+  sources Source[]
 
-  id           Int            @id @default(autoincrement()) // @db.UnsignedInt
-  name         String         // @unique(map: "idx_category_name_unique") @db.VarChar(255)
+  @@map("category")
 }
 
 model Source {
-  @@map("source")  
+  id       Int    @id @default(autoincrement())
+  name     String @unique
+  code     String
+  category Int
+  language Int
 
-  id           Int            @id @default(autoincrement()) // @db.UnsignedInt
-  name         String         // @unique(map: "idx_category_name_unique") @db.VarChar(255)
+  categoryRelation Category @relation(fields: [category], references: [id])
+  languageRelation Language @relation(fields: [language], references: [id])
+
+  @@map("source")
 }
