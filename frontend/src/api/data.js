@@ -11,39 +11,41 @@ import attackImage from '../assets/images/attack.png';
 export const about_blocks = [
     {
         img: aboutRecon,
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque \
-        rhoncus erat non facilisis. Vestibulum gravida sem laoreet, gravida urna vel, \
-        venenatis felis. Ut tincidunt nulla vel orci malesuada faucibus. Donec non tellus \
-        felis. Cras eleifend odio orci, ut dictum quam vulputate eu. Aliquam hendrerit \
-        neque odio, eu condimentum orci condimentum a. Integer ut luctus ligula. \
-        Suspendisse a gravida justo. Praesent massa massa, congue ac nunc at, consequat \
-        auctor libero. Maecenas risus arcu, congue nec metus vitae, cursus ullamcorper lacus. \
-        Quisque et augue et sapien aliquam pellentesque nec eget orci. Sed consectetur \
-        odio vel vestibulum ullamcorper."
+        title: "Offensive-Technologies Recon Software Division", 
+        text: "Actionable knowledge drives every successful engagement. \
+        The Recon Software division builds and curates tooling for open-source \
+        intelligence and in-system enumeration—from surface-level footprinting \
+        to deep privilege-escalation mapping. Our aim is to furnish defenders-through-offense \
+        with precise, minimally intrusive discovery mechanisms that shorten assessment cycles \
+        and reduce guesswork. We emphasize clarity of output and transparency of methodology, \
+        so findings translate directly into remediation steps. Ultimately, our goal is to make \
+        reconnaissance a disciplined, repeatable science that benefits organizations and individuals alike."
     }, 
     {
         img: aboutDeceive,
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque \
-        rhoncus erat non facilisis. Vestibulum gravida sem laoreet, gravida urna vel, \
-        venenatis felis. Ut tincidunt nulla vel orci malesuada faucibus. Donec non tellus \
-        felis. Cras eleifend odio orci, ut dictum quam vulputate eu. Aliquam hendrerit \
-        neque odio, eu condimentum orci condimentum a. Integer ut luctus ligula. \
-        Suspendisse a gravida justo. Praesent massa massa, congue ac nunc at, consequat \
-        auctor libero. Maecenas risus arcu, congue nec metus vitae, cursus ullamcorper lacus. \
-        Quisque et augue et sapien aliquam pellentesque nec eget orci. Sed consectetur \
-        odio vel vestibulum ullamcorper."
+        title: "Offensive-Technologies Deceiving Software Division ",
+        text: "Human behavior remains the most unpredictable variable in any security equation.\
+         Our Deceiving Software division studies, simulates, and safely weaponizes \
+         social-engineering vectors that target everyday habits—phishing lures, interface \
+         misdirection, and other cognitive loopholes. By replicating these tactics in controlled \
+         environments, we enable red-teamers and awareness programs to inoculate users against \
+         the real thing. We approach this work with respect for the people we study, focusing \
+         on insight and education rather than spectacle. If users emerge a little more skeptical \
+         and a lot more resilient, we’ve done our job."
     },
     {
         img: aboutAttack,
-        text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque \
-        rhoncus erat non facilisis. Vestibulum gravida sem laoreet, gravida urna vel, \
-        venenatis felis. Ut tincidunt nulla vel orci malesuada faucibus. Donec non tellus \
-        felis. Cras eleifend odio orci, ut dictum quam vulputate eu. Aliquam hendrerit \
-        neque odio, eu condimentum orci condimentum a. Integer ut luctus ligula. \
-        Suspendisse a gravida justo. Praesent massa massa, congue ac nunc at, consequat \
-        auctor libero. Maecenas risus arcu, congue nec metus vitae, cursus ullamcorper lacus. \
-        Quisque et augue et sapien aliquam pellentesque nec eget orci. Sed consectetur \
-        odio vel vestibulum ullamcorper."
+        title: "Offensive-Technologies Attacking Software Division",
+        text: "Our Attacking Software division exists to explore \
+        the real-world security gaps that affect private users \
+        every day. We rigorously research and exercise consumer-grade \
+        operating systems, applications, and connected devices to reveal \
+        vulnerabilities before hostile actors exploit them. Our objective \
+        is straightforward: provide security professionals with ethically \
+        sourced insights and controlled offensive capabilities that raise \
+        the baseline of personal digital safety. We measure success not by \
+        headline-grabbing exploits, but by the quiet hardening that happens \
+        once weaknesses are exposed and responsibly reported."
     }
 ]
 

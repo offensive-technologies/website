@@ -19,14 +19,20 @@ export default function About() {
         {about_blocks.map((ab, i) => (
           <div>
             {i % 2 == 0 ? (
-              <div className="about-block">
-                <img src={ab.img} />
-                <p>{ab.text}</p>
+              <div>
+                <h3 className="about-block-title">{ab.title}</h3>
+                <div className="about-block">
+                  <img src={ab.img} />
+                  <p>{ab.text}</p>
+                </div>
               </div>
             ) : (
-              <div className="about-block">
-                <p>{ab.text}</p>
-                <img src={ab.img} />
+              <div>
+                <h3 className="about-block-title">{ab.title}</h3>
+                <div className="about-block even-block">
+                  <p>{ab.text}</p>
+                  <img src={ab.img} />
+                </div>
               </div>
             )}
           </div>

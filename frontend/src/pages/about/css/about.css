@@ -1,6 +1,5 @@
 .about-page {
     margin: 60px;
-    padding-top: 30px;
     opacity: 0;
     transform: translateY(50px);
     animation: slideFadeIn 1.2s ease forwards;
@@ -13,26 +12,62 @@
   }
 }
 
+.about-block{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+    padding: 20px;
+    padding-bottom: 50px;
 
-.about-page{
+    img{
+        max-width: 480px;
+        max-height: 250px;
+        width: auto;
+        height: auto;
 
-    .about-block{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        
-        padding: 20px;
-        padding-bottom: 50px;
-
-        img{
-            max-width: 550px;
-            max-height: 275px;
-        }
-
-        p{
-            text-align: justify;
-            max-width: 500px;
-        }
+        align-self: center;
     }
 
+    p{
+        text-align: justify;
+        max-width: 415px;
+        padding-left: 15px;
+        padding-right: 15px;
+
+        align-self: center;
+    }
 }
+
+.about-block-title{
+    text-align: center;
+    padding-top: 30px;
+}
+
+    /* responsiveness */
+    @media (max-width: 1200px) {
+        .about-page {
+            margin: 0px;
+        }
+
+        .about-block{
+            display: flex;
+            flex-direction:column;
+
+            p{
+                padding: 0px;
+                margin-top: 40px;
+            }
+        }
+
+        .even-block{
+            img {
+                order: 1; 
+              }
+          
+            p {
+                order: 2;
+            }
+        }
+    
+    }

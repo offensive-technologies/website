@@ -134,3 +134,14 @@
     color: #751b08;
     transform: translateY(-5px);
 }
+
+
+/* responsiveness */
+@media (max-width: 760px) {
+
+.icons-flexbox {
+    display: flex;
+    flex-direction: column;
+    gap: 75px;
+}
+}
