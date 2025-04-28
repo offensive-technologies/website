@@ -1,6 +1,16 @@
+import aboutRecon from '../assets/images/about-recon.png';
+import aboutDeceive from '../assets/images/about-deceive.png';
+import aboutAttack from '../assets/images/about-attack.png';
+import templatesImage from '../assets/images/templates.png';
+import algorithmsImage from '../assets/images/algorithms.png';
+import reconImage from '../assets/images/recon.png';
+import deceiveImage from '../assets/images/deceive.png';
+import attackImage from '../assets/images/attack.png';
+
+
 export const about_blocks = [
     {
-        img: "/src/assets/images/about-recon.png",
+        img: aboutRecon,
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque \
         rhoncus erat non facilisis. Vestibulum gravida sem laoreet, gravida urna vel, \
         venenatis felis. Ut tincidunt nulla vel orci malesuada faucibus. Donec non tellus \
@@ -12,7 +22,7 @@ export const about_blocks = [
         odio vel vestibulum ullamcorper."
     }, 
     {
-        img: "/src/assets/images/about-deceive.png",
+        img: aboutDeceive,
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque \
         rhoncus erat non facilisis. Vestibulum gravida sem laoreet, gravida urna vel, \
         venenatis felis. Ut tincidunt nulla vel orci malesuada faucibus. Donec non tellus \
@@ -24,7 +34,7 @@ export const about_blocks = [
         odio vel vestibulum ullamcorper."
     },
     {
-        img: "/src/assets/images/about-attack.png",
+        img: aboutAttack,
         text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam pellentesque \
         rhoncus erat non facilisis. Vestibulum gravida sem laoreet, gravida urna vel, \
         venenatis felis. Ut tincidunt nulla vel orci malesuada faucibus. Donec non tellus \
@@ -38,18 +48,19 @@ export const about_blocks = [
 ]
 
 //  library data
+
 export const library_blocks = [
     {
-        img: "/src/assets/images/templates.png",
+        img: templatesImage,
         title: "templates",
         table: "templates"
-    }, 
+    },
     {
-        img: "/src/assets/images/algorithms.png",
+        img: algorithmsImage,
         title: "algorithms",
         table: "algorithms"
-    }, 
-]
+    }
+];
 
 export const library_suggestions = [
     { title: "Authentication" },
@@ -92,18 +103,18 @@ export const languages = [
 // tools data
 export const tools_blocks = [
     {
-        img: "/src/assets/images/recon.png",
+        img: reconImage,
         title: "Recon"
-    }, 
+    },
     {
-        img: "/src/assets/images/deceive.png",
+        img: deceiveImage,
         title: "Deceive"
-    }, 
+    },
     {
-        img: "/src/assets/images/attack.png",
+        img: attackImage,
         title: "Attack"
-    }, 
-]
+    }
+];
 
 export const unavailables = [
     "Segmentation fault at invalid memory address, core dumped",
