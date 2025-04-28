@@ -1,6 +1,7 @@
 import { IoIosArrowUp } from "react-icons/io";
 import CodeSegment from "./CodeSegment";
 import AutoComplete from "./AutoComplete";
+import { library_suggestions } from "../../api/data";
 import React from "react";
 
 export default function SearchArea({
@@ -20,6 +21,12 @@ export default function SearchArea({
       onEnter();
     }
   };
+
+  const isInList = entered
+    ? library_suggestions.some(
+        (suggestion) => suggestion.title === confirmedSearch
+      )
+    : false;
 
   return (
     <div
@@ -41,11 +48,14 @@ export default function SearchArea({
         onKeyDown={handleKeyDown}
       />
 
-      {/* Autocomplete suggesties */}
       <AutoComplete suggestions={suggestions} onSelect={onSuggestionSelect} />
 
-      {/* Alleen tonen als Enter gedaan is */}
-      {confirmedSearch && <CodeSegment item={confirmedSearch} />}
+      {confirmedSearch &&
+        (isInList ? (
+          <CodeSegment item={confirmedSearch} />
+        ) : (
+          <p>no result found on {confirmedSearch}</p>
+        ))}
     </div>
   );
 }

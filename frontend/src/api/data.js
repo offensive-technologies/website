@@ -7,6 +7,7 @@ import reconImage from '../assets/images/recon.png';
 import deceiveImage from '../assets/images/deceive.png';
 import attackImage from '../assets/images/attack.png';
 
+//=================== about =================== 
 
 export const about_blocks = [
     {
@@ -49,7 +50,7 @@ export const about_blocks = [
     }
 ]
 
-//  library data
+//=================== library =================== 
 
 export const library_blocks = [
     {
@@ -102,7 +103,30 @@ export const languages = [
     }
 ]
 
-// tools data
+
+export const code_example = `
+from random import choice
+
+# template
+length = len("10101010101010");
+short  = int(length / 2)
+
+for _ in range(short):
+    
+    array = ([0]*short) + [1]*short
+    
+    for i in range(length if length % 2 == 0 else length-1):
+
+        chr = choice(array)
+        array.remove(chr)
+        
+        print(chr, end='')
+
+print()
+`; 
+
+//=================== tools =================== 
+
 export const tools_blocks = [
     {
         img: reconImage,
@@ -117,6 +141,9 @@ export const tools_blocks = [
         title: "Attack"
     }
 ];
+
+
+//=================== others =================== 
 
 export const unavailables = [
     "Segmentation fault at invalid memory address, core dumped",
@@ -161,3 +188,4 @@ export const unavailables = [
     "Physical memory address outside allowable range",
     "Resource pointer corrupted, access denied"
 ];
+

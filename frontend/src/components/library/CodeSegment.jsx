@@ -1,52 +1,40 @@
-import { CopyBlock, obsidian } from "react-code-blocks";
-import { IoIosArrowDown } from "react-icons/io";
-import { languages } from "../../api/data";
+import { CopyBlock } from "react-code-blocks";
+import LanguageDropDown from "./LanguageDropDown";
+import { code_example } from "../../api/data";
 import "./css/library.css";
 import React from "react";
 
 export default function CodeSegment() {
-  const code = `from random import choice
-
-# template
-length = len("10101010101010");
-short  = int(length / 2)
-
-for _ in range(short):
-    
-    array = ([0]*short) + [1]*short
-    
-    for i in range(length if length % 2 == 0 else length-1):
-
-        chr = choice(array)
-        array.remove(chr)
-        
-        print(chr, end='')
-
-print()
-`;
+  const customTheme = {
+    lineNumberColor: "#41403c",
+    lineNumberBgColor: "#41403c",
+    backgroundColor: "#212121",
+    textColor: "#a49c9a",
+    keywordColor: "#5185fc",
+    stringColor: "#395db0",
+    commentColor: "#41403c",
+    functionColor: "#c12c0d",
+    builtinFunctionColor: "#c12c0d",
+    methodColor: "#c12c0d",
+    variableColor: "#c12c0d",
+    numberColor: "#c12c0d",
+    punctuationColor: "#a49c9a",
+    operatorColor: "#c12c0d",
+  };
 
   const block = {
-    text: code,
+    text: code_example,
     language: "py",
     showLineNumbers: true,
     startingLineNumber: 1,
     wrapLines: true,
-    theme: obsidian,
+    theme: customTheme,
   };
 
   return (
     <div className="code-segment">
       <div className="languages-flexbox">
-        <div className="dropdown">
-          <ul className="dropdown-menu">
-            {languages.map((l, index) => (
-              <li key={l.id} className={index === 0 ? "first-li" : ""}>
-                <a>{l.name}</a>
-                {index === 0 && <IoIosArrowDown className="arrow-icon" />}
-              </li>
-            ))}
-          </ul>
-        </div>
+        <LanguageDropDown />
       </div>
       <CopyBlock {...block} className={"code-block"} />
     </div>
