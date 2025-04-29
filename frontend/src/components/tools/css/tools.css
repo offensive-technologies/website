@@ -1,0 +1,9 @@
+.tools-icon{
+    opacity: 25%;
+}
+
+.tools-icon,
+.icon-tools-title, 
+.lock-icon{
+    cursor:default;
+}

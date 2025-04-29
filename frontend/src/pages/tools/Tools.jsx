@@ -1,14 +1,12 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-import IconGrid from "../../components/library/IconGrid";
 import { tools_blocks } from "../../api/data";
 import "./css/tools.css";
 import React from "react";
+import IconItemTools from "../../components/tools/IconItemTools";
 
-export default function Library() {
+export default function Tools() {
   const location = useLocation();
-  const [selectedTable, setSelectedTable] = useState(null);
-  const searchBarRef = useRef(null);
 
   useEffect(() => {
     if (location.state?.fromMenu) {
@@ -16,21 +14,13 @@ export default function Library() {
     }
   }, [location]);
 
-  const handleIconClick = (tableName) => {
-    setConfirmedSearch("");
-    setSelectedTable(tableName);
-    setTimeout(() => {
-      searchBarRef.current?.scrollIntoView({ behavior: "smooth" });
-    }, 100);
-  };
-
   return (
     <div className="tools-page">
-      <IconGrid
-        blocks={tools_blocks}
-        selectedTable={selectedTable}
-        onIconClick={handleIconClick}
-      />
+      <div className="icons-flexbox">
+        {tools_blocks.map((lb) => (
+          <IconItemTools key={lb.title} lb={lb} />
+        ))}
+      </div>
     </div>
   );
 }
