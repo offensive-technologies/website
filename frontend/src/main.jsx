@@ -1,4 +1,4 @@
-import { RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { createRoot } from "react-dom/client";
 import Library from "./pages/library/Library";
 import About from "./pages/about/About";
@@ -8,9 +8,8 @@ import Layout from "./pages/Layout";
 import { StrictMode } from "react";
 import "./index.css";
 import React from "react";
-import { createHashRouter } from "react-router-dom";
 
-const router = createHashRouter([
+const router = createBrowserRouter([
   {
     element: <Layout />,
     children: [
@@ -35,6 +34,9 @@ const router = createHashRouter([
         element: <NotFound />,
       },
     ],
+  },
+  {
+    basename: process.env.PUBLIC_URL, 
   },
 ]);
 
