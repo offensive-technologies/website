@@ -9,7 +9,7 @@
     "build": "vite build",
     "predeploy": "yarn build",
     "deploy": "gh-pages -d dist",
-    "deploy:all": "git add . && git commit -m 'deploy' && git push && yarn build && yarn deploy", 
+    "deploy:all": "git add . && git commit -m 'deploy' && git push && yarn build && cp dist/index.html dist/404.html && yarn deploy",
     "lint": "eslint .",
     "preview": "vite preview"
   },

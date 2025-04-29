@@ -20,17 +20,21 @@ export default function About() {
           <div>
             {i % 2 == 0 ? (
               <div>
-                <h3 className="about-block-title">{ab.title}</h3>
                 <div className="about-block">
                   <img src={ab.img} />
-                  <p>{ab.text}</p>
+                  <div>
+                    <h3 className="about-block-title">{ab.title}</h3>
+                    <p>{ab.text}</p>
+                  </div>
                 </div>
               </div>
             ) : (
               <div>
-                <h3 className="about-block-title">{ab.title}</h3>
-                <div className="about-block even-block">
-                  <p>{ab.text}</p>
+                <div className="about-block uneven-block">
+                  <div>
+                    <h3 className="about-block-title">{ab.title}</h3>
+                    <p>{ab.text}</p>
+                  </div>
                   <img src={ab.img} />
                 </div>
               </div>
