@@ -1,0 +1,13 @@
+.menu-flexbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+#brand-title{
+    color: #751b08;
+    font-size: 16pt;
+    text-transform: uppercase;
+    font-family: "Aptos";
+    margin-left: 30px;
+}

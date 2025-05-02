@@ -1,11 +1,11 @@
 import { Outlet, ScrollRestoration } from "react-router-dom";
-import Menu from "./menu/Menu";
+import Header from "../components/header/Header";
 import React from "react";
 
 export default function Layout() {
   return (
     <div>
-      <Menu />
+      <Header />
       <Outlet />
       <ScrollRestoration />
     </div>
